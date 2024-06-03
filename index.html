@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Addition Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Addition Form</h2>
+        <form id="additionForm">
+            <input type="number" id="number1" placeholder="Enter first number" required>
+            <input type="number" id="number2" placeholder="Enter second number" required>
+            <button type="button" onclick="calculateSum()">Add Numbers</button>
+            <input type="text" id="result" placeholder="Result" readonly>
+        </form>
+    </div>
+
+    <script>
+        function calculateSum() {
+          
+            var num1 = parseFloat(document.getElementById('number1').value);
+            var num2 = parseFloat(document.getElementById('number2').value);
+            
+            var sum = num1 + num2;
+            document.getElementById('result').value = sum;
+        }
+    </script>
+
+</body>
+</html>
